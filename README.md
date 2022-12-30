@@ -10,7 +10,7 @@ Neste repositório, você encontrará os desafios realizados durante a formaçã
 
 ## Sobre o desafio de testes automatizados
 
-### Requisitos do projeto
+### Requisitos iniciais do projeto
 
 - Crie no mínimo 2 e no máximo 3 suítes de testes (arquivos de testes);
 - Crie para cada suíte de teste no mínimo 2 e no máximo 4 casos de Teste.
@@ -23,6 +23,7 @@ Neste repositório, você encontrará os desafios realizados durante a formaçã
 
 - Framework para o desafio: Cypress
 - Linguagem de programação: Javascript
+- Abordagem: Page Object Model (POM)
 
 ### Como foi planejado os testes?
 
@@ -30,7 +31,7 @@ Os testes foram divididos em 3 suítes principais focadas em determinadas partes
 
 #### Suíte Login | Objetivo: Verificar a tela de login
 
-Para essa suíte, 4 casos foram pensados
+Para essa suíte, 4 casos foram pensados:
 
 - Caso 1: login com credenciais válidas, realizando adequadamente o caminho pensado.
 
@@ -59,6 +60,6 @@ Os casos 3 e 4 seguem essa mesma linha de racicíonio, agora na seção ADMIN.
 
 - Caso 2: realiza a mudança de senha, 'Change Password', pelo usuário com o comportamento esperado: credenciais válidos e com nenhuma fuga do caminho 'feliz'.
 
-- Caso 3: contraponto do caso 2. Nele, é testado se a operação 'Change Passsword' não é concluída se inputs nulos e inválidos são colocados nos campos.
+- Caso 3: contraponto do caso 2. Nele, é testado se a operação 'Change Passsword' não é concluída quando inputs nulos e inválidos são colocados nos campos.
 
 - Caso 4: caso simples que realiza o logout no sistema pelo usuário.
