@@ -1,6 +1,7 @@
 /* 
   Formação Testes Manuais e Automatizados - Minsait
   Autor: Leonardo do Nascimento Peixoto da Silva
+  Github do projeto: https://github.com/leonardonps/desafios-finais-testes-manuais-automatizados-minsait
 */
 
 ///<reference types="cypress"/>

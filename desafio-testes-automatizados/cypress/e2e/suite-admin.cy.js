@@ -1,6 +1,7 @@
 /* 
   Formação Testes Manuais e Automatizados - Minsait
   Autor: Leonardo do Nascimento Peixoto da Silva
+  Github do projeto: https://github.com/leonardonps/desafios-finais-testes-manuais-automatizados-minsait
 */
 
 ///<reference types="cypress"/>
@@ -37,7 +38,7 @@ describe('Suite 2 - Verificando principais funcionalidades fornecidas para um us
     Orange.verificarToastSucessfullySaved()
   })
 
-  it.only('Caso 2 - Deve pesquisar um funcionário utilizando seu nome e/ou ID e, depois, removê-lo do sistema usando o botão na seção Actions.', () => {
+  it('Caso 2 - Deve pesquisar um funcionário utilizando seu nome e/ou ID e, depois, removê-lo do sistema usando o botão na seção Actions.', () => {
     OrangePimEmployeeList.visitarPagina()
     OrangePimEmployeeList.verificarAcessoPagina()
     OrangePimEmployeeList.inserirNomeFuncionario('Antonio Maria Fernandez')
