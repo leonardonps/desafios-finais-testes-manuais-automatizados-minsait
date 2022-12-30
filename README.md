@@ -19,6 +19,24 @@ Neste repositório, você encontrará os desafios realizados durante a formaçã
 
 [Orange HRM](https://opensource-demo.orangehrmlive.com/)
 
+### Imagens da plataforma
+
+<div align="center">
+
+#### Orange HRM - Tela de Login
+![Orange HRM - Login](https://github.com/leonardonps/desafios-finais-testes-manuais-automatizados-minsait/blob/main/desafio-testes-automatizados/imagens/tela-login.png)
+
+#### Orange HRM - Menus principais do site Orange HRM
+![Menus principais do site](https://github.com/leonardonps/desafios-finais-testes-manuais-automatizados-minsait/blob/main/desafio-testes-automatizados/imagens/orange-menus.png)
+
+#### Orange HRM - Seção
+![Orange HRM - Seção Admin](https://github.com/leonardonps/desafios-finais-testes-manuais-automatizados-minsait/blob/main/desafio-testes-automatizados/imagens/orange-admin.png)
+
+#### Orange HRM - Seção PIM
+![Orange HRM - Seção PIM](https://github.com/leonardonps/desafios-finais-testes-manuais-automatizados-minsait/blob/main/desafio-testes-automatizados/imagens/orange-pim.png)
+
+</div>
+
 ### Ferramentas utilizadas para a elaboração dos casos de testes
 
 - Framework para o desafio: Cypress
@@ -63,3 +81,8 @@ Os casos 3 e 4 seguem essa mesma linha de racicíonio, agora na seção ADMIN.
 - Caso 3: contraponto do caso 2. Nele, é testado se a operação 'Change Passsword' não é concluída quando inputs nulos e inválidos são colocados nos campos.
 
 - Caso 4: caso simples que realiza o logout no sistema pelo usuário.
+
+### Alguns pontos a serem melhorados nesse projeto
+
+- Automatizar (pular) a etapa de Login em casos que esse não precisa ser testado 
+- Adicionar mais casos de contraponto.
