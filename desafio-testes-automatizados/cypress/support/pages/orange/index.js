@@ -6,10 +6,15 @@ class Orange{
         cy.get(el.imgClientBrand).should('be.visible')
     }
 
-    expandirRetrairMenuPrincipal(){
+    expandirMenuPrincipal(){
         cy.get(el.btnMainMenu).click()
+        cy.get(el.mainMenuExpanded).should('be.visible')
     }
 
+    retrairMenuPrincipal(){
+        cy.get(el.btnMainMenu).click()
+        cy.get(el.mainMenuNoExpanded).should('be.visible')
+    }
     verificarQtdElementosMenuPrincipal(){
         cy.get(el.mainMenuItem).should('have.length', '11')
     }
@@ -37,8 +42,16 @@ class Orange{
         cy.get(el.userMenuItem).contains('Logout').click()
     }
 
-    clicarMenuUsuarioChangePassword(){
-        cy.get(el.userMenuItem).contains("Change Password").click()
+    verificarToastSucessfullySaved(){
+        cy.get(el.toastMessages).should('be.visible').and('contain','Success').and('contain', 'Successfully Saved')
+    }
+
+    verificarToastSucessfullyDeleted(){
+        cy.get(el.toastMessages).should('be.visible').and('contain','Success').and('contain', 'Successfully Deleted')
+    }
+
+    verificarToastINoRecordsFound(){
+        cy.get(el.toastMessages).should('be.visible').and('contain','Info').and('contain', 'No Records Found')
     }
 }
 

@@ -2,9 +2,11 @@
 export const ELEMENTS = {
     imgClientBrand: 'img[alt="client brand banner"]',
     btnMainMenu: 'button[class="oxd-icon-button oxd-main-menu-button"]',
-    mainMenuShort: 'div[class="oxd-sidepanel-body"]',
+    mainMenuNoExpanded: 'aside[class="oxd-sidepanel toggled"]',
+    mainMenuExpanded: 'aside[class="oxd-sidepanel"]',
     mainMenuSearch: 'input[placeholder="Search"]',
     mainMenuItem: 'li[class="oxd-main-menu-item-wrapper"]',
     userMenu: 'span[class="oxd-userdropdown-tab"]',
-    userMenuItem: 'a[class="oxd-userdropdown-link"]'
+    userMenuItem: 'a[class="oxd-userdropdown-link"]',
+    toastMessages: 'div[id="oxd-toaster_1"]'
 }

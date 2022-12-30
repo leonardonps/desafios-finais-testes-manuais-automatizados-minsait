@@ -2,7 +2,7 @@ const el = require("./elements").ELEMENTS;
 
 class ResetPassword{
     verificarAcessoPagina(){
-        cy.get(el.header).contains("Reset Password")
+        cy.get(el.header).should('contain', 'Reset Password')
     }
 
     inserirUsuario(username){

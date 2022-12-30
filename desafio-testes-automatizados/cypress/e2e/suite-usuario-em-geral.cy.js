@@ -1,3 +1,8 @@
+/* 
+  Formação Testes Manuais e Automatizados - Minsait
+  Autor: Leonardo do Nascimento Peixoto da Silva
+*/
+
 ///<reference types="cypress"/>
 import Login from '../support/pages/login/'
 import OrangeAdminUserManagement from '../support/pages/orange-admin-user-management'
@@ -13,33 +18,36 @@ describe('Suite 3 - Verificando funcionalidades gerais da página principal Oran
     Orange.verificarLoginValido()
   })
 
-  it.only('Caso 1 - Deve examinar as características (expansão, quantidade e quais items) e funcionalidades (procurar item) do menu principal', () => {
-    Orange.expandirRetrairMenuPrincipal()
-    Orange.expandirRetrairMenuPrincipal()
+  it('Caso 1 - Deve examinar as características (expansão, quantidade e quais items) e funcionalidades (procurar item) do menu principal.', () => {
+    Orange.retrairMenuPrincipal()
+    Orange.expandirMenuPrincipal()
     Orange.verificarQtdElementosMenuPrincipal()
     Orange.verificarElementosMenuPrincipal()
     Orange.pesquisarMenuPrincipal('Admin')
+
+    //Validação
     OrangeAdminUserManagement.verificarAcessoPagina()
   })
 
-  it('Caso 2 - Deve realizar a operação Change Password do menu drop-down do perfil do usuário com sucesso com inputs válidos', () => {
+  it('Caso 2 - Deve realizar a operação Change Password do menu drop-down do perfil do usuário com sucesso com inputs válidos.', () => {
     const senhaNova = 'TESTEteste123!'
 
-    Orange.expandirRetrairMenuUsuario()
-    Orange.clicarMenuUsuarioChangePassword()
+    OrangePimUpdatePassword.visitarPagina()
     OrangePimUpdatePassword.verificarAcessoPagina()
     OrangePimUpdatePassword.inserirSenhaAtual('admin123')
     OrangePimUpdatePassword.inserirSenhaNova(senhaNova)
     OrangePimUpdatePassword.confirmarSenhaNova(senhaNova)
     OrangePimUpdatePassword.clicarSalvar()
+
+    //Validação
     OrangePimUpdatePassword.verificarMudancaSenha()
+    Orange.verificarToastSucessfullySaved()
   })
 
-  it('Caso 3 - Deve cancelar com sucesso a operação Change Password do menu drop-down do perfil do usuário com inputs nulos e inválidos', () => {
+  it('Caso 3 - Deve cancelar com sucesso a operação Change Password do menu drop-down do perfil do usuário com inputs nulos e inválidos.', () => {
     const senhaNova = 'teste'
 
-    Orange.expandirRetrairMenuUsuario()
-    Orange.clicarMenuUsuarioChangePassword()
+    OrangePimUpdatePassword.visitarPagina()
     OrangePimUpdatePassword.verificarAcessoPagina()
     
     //Testando a entrada de inputs nulos
@@ -52,15 +60,17 @@ describe('Suite 3 - Verificando funcionalidades gerais da página principal Oran
     OrangePimUpdatePassword.confirmarSenhaNova(senhaNova)
     OrangePimUpdatePassword.clicarSalvar()
 
-    //Verificando e cancelando operação
+    //Validando e cancelando operação
     OrangePimUpdatePassword.verificarNaoMudancaSenha()
     OrangePimUpdatePassword.clicarCancelar()
     OrangeDashboard.verificarAcessoPagina()
   })
 
-  it('Caso 4 - Deve realizar o LogOut do usuário no sistema', () => {
+  it('Caso 4 - Deve realizar o LogOut do usuário no sistema.', () => {
     Orange.expandirRetrairMenuUsuario()
     Orange.clicarMenuUsuarioLogOut()
+    
+    //Validação
     Login.verificarAcessoPagina()
   })
   

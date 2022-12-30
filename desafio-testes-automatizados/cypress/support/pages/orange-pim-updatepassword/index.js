@@ -1,8 +1,12 @@
 const el = require("./elements").ELEMENTS;
 
 class OrangePimUpdatePassword{
+    visitarPagina(){
+        cy.visit(el.url)
+    }
+
     verificarAcessoPagina(){
-        cy.get(el.title).contains("Update Password")
+        cy.get(el.title).should('contain', 'Update Password')
     }
 
     inserirSenhaAtual(senhaAtual){
@@ -32,7 +36,6 @@ class OrangePimUpdatePassword{
     }
 
     verificarMudancaSenha(){
-        cy.get(el.toastPasswordChanged).should('be.visible').and('contain','Success')
         cy.get(el.inputsPassword).invoke('val').should('be.empty')
     }
 
