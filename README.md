@@ -6,7 +6,23 @@ Neste repositório, você encontrará os desafios realizados durante a formaçã
 
 ## Sobre o desafio de testes manuais
 
-[Em construção...]
+### Primeira etapa
+
+A primeira etapa do desafio dos testes manuais se deu por meio de um questionário. Nele, teve-se que responder algumas questões englobando:
+
+- O que é teste? 
+- O que é qualidade de software? 
+- Teste Agile x Teste convencional
+- Particionamento de Equivalência, Análise de Valor Limite e Tabela de Decisão
+
+### Segunda etapa
+
+Já a segunda etapa foi um pouco mais de prática e, nela, desenvolveu os seguintes assuntos vistos durante o treinamento:
+
+- Planejamento de testes
+- Modelagem e especificação de casos de testes
+- Gerenciamento e monitoramento de testes
+- Estratégia dos testes
 
 ## Sobre o desafio de testes automatizados
 
